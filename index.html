@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="LibreVoid Whitelist Presale — $5 Entry for 25,000 LV Tokens + Exclusive NFT + Beta Access. Secure, anonymous, and volatility-protected.">
+  <meta name="theme-color" content="#00ff9d">
+  <title>LibreVoid Whitelist Presale — $5 Entry</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="manifest" href="data:application/manifest+json,{
+    \"name\": \"LibreVoid Whitelist Presale\",
+    \"short_name\": \"LV Presale\",
+    \"start_url\": \".\",
+    \"display\": \"standalone\",
+    \"background_color\": \"#0a0e17\",
+    \"theme_color\": \"#00ff9d\",
+    \"icons\": [{\"src\": \"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='40' fill='%2300ff9d'/%3E%3C/svg%3E\", \"sizes\": \"192x192\", \"type\": \"image/svg+xml\"}]
+  }">
+  <style>
+    :root {
+      --bg: #0a0e17;
+      --card: #111827;
+      --accent: #00ff9d;
+      --text: #e2e8f0;
+      --text-light: #94a3b8;
+      --gold: #fbbf24;
+      --border: #1e293b;
+      --stable: #10b981;
+      --nft: #a855f7;
+      --red: #ef4444;
+      --glow: rgba(0, 255, 157, 0.3);
+      --shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      padding: 2rem 1rem;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    .container { max-width: 960px; margin: 0 auto; text-align: center; }
+
+    /* Social Top Bar */
+    .join-us {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 1.2rem;
+      text-shadow: 0 0 20px var(--glow);
+      animation: fadeIn 1s ease-out;
+    }
+    .social-bar {
+      display: flex;
+      justify-content: center;
+      gap: 1.2rem;
+      margin: 1.5rem 0 2.5rem;
+      flex-wrap: wrap;
+    }
+    .social-btn {
+      display: flex;
+      align-items: center;
+      gap: .6rem;
+      padding: .8rem 1.6rem;
+      border-radius: 2rem;
+      font-weight: 600;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: var(--transition);
+      box-shadow: 0 6px 20px rgba(0,0,0,.4);
+    }
+    .x-btn { background: #000; color: #fff; }
+    .x-btn:hover { background: #1da1f2; transform: translateY(-3px); }
+    .tg-btn { background: #0088cc; color: #fff; }
+    .tg-btn:hover { background: #006d9e; transform: translateY(-3px); }
+    .dc-btn { background: #5865f2; color: #fff; }
+    .dc-btn:hover { background: #4752c4; transform: translateY(-3px); }
+
+    /* Header */
+    .logo {
+      font-size: 4.6rem;
+      font-weight: 800;
+      color: var(--accent);
+      text-shadow: 0 0 35px var(--glow);
+      letter-spacing: -3px;
+      margin-bottom: .5rem;
+      animation: fadeInDown 1s ease-out;
+    }
+    .tagline {
+      font-size: 1.25rem;
+      color: var(--text-light);
+      margin-bottom: 1rem;
+      font-weight: 500;
+    }
+    .badge {
+      display: inline-block;
+      background: linear-gradient(135deg, rgba(0,255,157,.25), rgba(168,85,247,.25));
+      color: var(--accent);
+      padding: .6rem 1.5rem;
+      border-radius: 2rem;
+      font-size: 1rem;
+      font-weight: 700;
+      border: 1.5px solid var(--accent);
+      box-shadow: 0 0 25px var(--glow);
+      animation: pulse 3s infinite;
+    }
+    .live-dot {
+      display: inline-block;
+      width: 10px; height: 10px;
+      background: #ef4444;
+      border-radius: 50%;
+      animation: blink 1.5s infinite;
+      margin-right: .5rem;
+    }
+
+    /* Cards */
+    .card {
+      background: var(--card);
+      border-radius: 1.2rem;
+      padding: 2.4rem;
+      margin: 2rem 0;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      animation: fadeInUp 0.8s ease-out;
+    }
+    .card:hover { transform: translateY(-6px); }
+    h2 { color: var(--accent); font-size: 2.1rem; margin-bottom: 1rem; font-weight: 700; }
+    p { font-size: 1.1rem; color: var(--text-light); margin-bottom: 1.3rem; }
+    .price { font-size: 3.8rem; font-weight: 800; color: var(--gold); margin: 1.6rem 0; text-shadow: 0 0 30px rgba(251,191,36,.6); }
+
+    /* Progress */
+    .countdown { font-size: 2.2rem; font-weight: 800; color: var(--gold); margin: 1.4rem 0; text-shadow: 0 0 20px rgba(251,191,36,.6); }
+    .progress-bar { height: 14px; background: #1e293b; border-radius: 7px; overflow: hidden; margin: 1rem 0; }
+    .progress-fill { height: 100%; background: linear-gradient(90deg, var(--accent), #00d68f); width: 0%; transition: width 1.8s ease; }
+    .progress-text { font-size: 1.3rem; color: var(--text); font-weight: 600; margin-top: .4rem; }
+    .progress-text span { color: var(--gold); }
+
+    /* Badges */
+    .stable-badge, .nft-badge {
+      padding: .7rem 1.6rem;
+      border-radius: 2rem;
+      font-weight: 700;
+      font-size: .95rem;
+      display: inline-block;
+      margin: 1rem 0;
+    }
+    .stable-badge { background: var(--stable); color: #fff; }
+    .nft-badge { background: var(--nft); color: #fff; }
+
+    /* Wallet */
+    .wallet-container { margin: 1.5rem 0; }
+    .wallet-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #0f172a;
+      padding: .9rem 1.2rem;
+      border-radius: .9rem;
+      border: 1.5px dashed var(--accent);
+      cursor: pointer;
+      user-select: none;
+      transition: .2s;
+    }
+    .wallet-header:hover { background: #1a1f2e; }
+    .wallet-label {
+      font-family: 'Courier New', monospace;
+      font-size: .84rem;
+      color: var(--text);
+      word-break: break-all;
+      max-width: 70%;
+      line-height: 1.45;
+    }
+    .copy-btn {
+      background: transparent;
+      color: var(--accent);
+      border: none;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: .2s;
+    }
+    .copy-btn:hover { color: var(--gold); }
+    .qr-container {
+      display: none;
+      margin-top: 1rem;
+      padding: 1.3rem;
+      background: #0f172a;
+      border-radius: .9rem;
+      border: 1px solid var(--border);
+    }
+    .qr {
+      width: 190px;
+      height: 190px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 14px;
+      border-radius: .8rem;
+      box-shadow: 0 0 30px var(--glow);
+    }
+
+    /* Note */
+    .note {
+      background: linear-gradient(135deg, #1e293b, #111827);
+      padding: 1.8rem;
+      border-radius: 1rem;
+      margin: 2.2rem 0;
+      border-left: 5px solid var(--accent);
+      text-align: left;
+      font-size: 1.03rem;
+      color: var(--text);
+      box-shadow: var(--shadow);
+    }
+    .note strong { color: var(--gold); }
+    .required { color: #ef4444; font-weight: 700; }
+
+    /* Buttons */
+    .btn {
+      background: var(--accent);
+      color: #0a0e17;
+      padding: 1.1rem 2.6rem;
+      border-radius: .9rem;
+      font-weight: 700;
+      font-size: 1.2rem;
+      display: inline-block;
+      margin: 1rem .5rem;
+      text-decoration: none;
+      transition: var(--transition);
+      box-shadow: 0 10px 35px rgba(0,255,157,.7);
+      cursor: pointer;
+    }
+    .btn:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 45px rgba(0,255,157,.9);
+    }
+    .dc-btn { background: #5865f2; color: #fff; }
+    .dc-btn:hover { background: #4752c4; }
+
+    /* Footer */
+    .footer {
+      margin-top: 4.5rem;
+      font-size: .95rem;
+      color: var(--text-light);
+      padding-top: 2rem;
+      border-top: 1px dashed var(--border);
+    }
+    .footer a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+      margin: 0 .4rem;
+      transition: .2s;
+    }
+    .footer a:hover { text-decoration: underline; }
+    .void { color: #a855f7; font-weight: 800; }
+
+    /* Animations */
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes fadeInDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes pulse { 0%,100% { box-shadow: 0 0 30px var(--glow); } 50% { box-shadow: 0 0 45px rgba(0,255,157,.6); } }
+    @keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: .3; } }
+
+    /* Mobile */
+    @media (max-width: 480px) {
+      .logo { font-size: 3.2rem; }
+      .price { font-size: 2.9rem; }
+      .countdown { font-size: 1.8rem; }
+      .btn { padding: .9rem 2rem; font-size: 1.1rem; }
+      .wallet-label { font-size: .74rem; max-width: 62%; }
+      .qr { width: 160px; height: 160px; }
+      .social-bar { gap: .8rem; }
+      .social-btn { padding: .6rem 1.2rem; font-size: .9rem; }
+      .join-us { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Social Top Bar -->
+    <div class="join-us">JOIN THE VOID</div>
+    <div class="social-bar">
+      <a href="https://x.com/librevoid" class="social-btn x-btn" target="_blank">
+        <i class="fab fa-x-twitter"></i> @librevoid
+      </a>
+      <a href="https://t.me/librevoid" class="social-btn tg-btn" target="_blank">
+        <i class="fab fa-telegram"></i> @librevoid
+      </a>
+      <a href="https://discord.gg/VZeUd7zdN" class="social-btn dc-btn" target="_blank">
+        <i class="fab fa-discord"></i> Discord
+      </a>
+    </div>
+
+    <!-- Header -->
+    <header>
+      <div class="logo">LV WHITELIST</div>
+      <p class="tagline">$5 Entry • 25K LV + NFT + Beta</p>
+      <div class="badge"><span class="live-dot"></span>LIVE — 10,000 SPOTS</div>
+    </header>
+
+    <!-- Countdown + Progress -->
+    <div class="card">
+      <h2>Presale Ends In</h2>
+      <div class="countdown" id="countdown">Calculating...</div>
+      <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+      <p class="progress-text"><span id="progress-percent">0%</span> of spots filled</p>
+    </div>
+
+    <!-- Price Card -->
+    <div class="card">
+      <h2>$5 USD = 25,000 LV</h2>
+      <div class="price">$5 USD</div>
+      <p><strong>Fixed Rate:</strong> 1 USD = 5,000 LV</p>
+      <p><strong>Min:</strong> $5 | <strong>Max:</strong> $1,000</p>
+      <p><strong>USDT Accepted — Volatility Covered</strong></p>
+      <div class="stable-badge">ZERO RISK — $5 = 25K LV</div>
+      <div class="nft-badge">NFT + BETA ACCESS</div>
+    </div>
+
+    <!-- Why Whitelist -->
+    <div class="note">
+      <strong>Why Whitelist?</strong><br>
+      In a world of surveillance, censorship, and failing grids — <strong>LibreVoid is the light</strong>. Offline wallets. QR trades. No servers. No masters.<br><br>
+      <strong>Official site & app launching soon!</strong> Only whitelisted users get early access + NFT.<br>
+      <strong>100% of funds reused to build LibreVoid.</strong><br><br>
+      <strong>Follow @librevoid on X</strong> <span class="required">— REQUIRED</span>
+    </div>
+
+    <!-- Payment Wallets -->
+    <div class="card">
+      <h2>Send $5+ USD</h2>
+      <p>Click to reveal QR • Tap to copy</p>
+
+      <!-- USDT ERC20 -->
+      <div class="wallet-container">
+        <div class="wallet-header" onclick="toggleQR('usdt-erc20')">
+          <div class="wallet-label">USDT ERC20 (ETH)<br>0x555e8e28595f1d5abcaDd4FBd6981c2340096cD3</div>
+          <button class="copy-btn" onclick="copyAddress('0x555e8e28595f1d5abcaDd4FBd6981c2340096cD3', event)">Copy</button>
+        </div>
+        <div class="qr-container" id="usdt-erc20-qr">
+          <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?data=0x555e8e28595f1d5abcaDd4FBd6981c2340096cD3&size=190x190&color=00FF9D&bgcolor=FFFFFF" alt="USDT ERC20">
+        </div>
+      </div>
+
+      <!-- USDT BEP20 -->
+      <div class="wallet-container">
+        <div class="wallet-header" onclick="toggleQR('usdt-bep20')">
+          <div class="wallet-label">USDT BEP20 (BNB)<br>0x555e8e28595f1d5abcaDd4FBd6981c2340096cD3</div>
+          <button class="copy-btn" onclick="copyAddress('0x555e8e28595f1d5abcaDd4FBd6981c2340096cD3', event)">Copy</button>
+        </div>
+        <div class="qr-container" id="usdt-bep20-qr">
+          <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?data=0x555e8e28595f1d5abcaDd4FBd6981c2340096cD3&size=190x190&color=00FF9D&bgcolor=FFFFFF" alt="USDT BEP20">
+        </div>
+      </div>
+
+      <!-- USDT TRC20 -->
+      <div class="wallet-container">
+        <div class="wallet-header" onclick="toggleQR('usdt-trc20')">
+          <div class="wallet-label">USDT TRC20 (TRON)<br>TXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</div>
+          <button class="copy-btn" onclick="copyAddress('TXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX', event)">Copy</button>
+        </div>
+        <div class="qr-container" id="usdt-trc20-qr">
+          <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?data=TXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX&size=190x190&color=00FF9D&bgcolor=FFFFFF" alt="USDT TRC20">
+        </div>
+      </div>
+
+      <!-- BTC -->
+      <div class="wallet-container">
+        <div class="wallet-header" onclick="toggleQR('btc')">
+          <div class="wallet-label">BTC<br>bc1qw77gznm0sveuxer2a96r406sr5yn53mxrqec2d</div>
+          <button class="copy-btn" onclick="copyAddress('bc1qw77gznm0sveuxer2a96r406sr5yn53mxrqec2d', event)">Copy</button>
+        </div>
+        <div class="qr-container" id="btc-qr">
+          <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?data=bc1qw77gznm0sveuxer2a96r406sr5yn53mxrqec2d&size=190x190&color=00FF9D&bgcolor=FFFFFF" alt="BTC">
+        </div>
+      </div>
+
+      <!-- SOL -->
+      <div class="wallet-container">
+        <div class="wallet-header" onclick="toggleQR('sol')">
+          <div class="wallet-label">SOL<br>BqL9JL7kdnHKrtqCUo8Zz1aB9ccwzCTAx3XudcC5CQTr</div>
+          <button class="copy-btn" onclick="copyAddress('BqL9JL7kdnHKrtqCUo8Zz1aB9ccwzCTAx3XudcC5CQTr', event)">Copy</button>
+        </div>
+        <div class="qr-container" id="sol-qr">
+          <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?data=BqL9JL7kdnHKrtqCUo8Zz1aB9ccwzCTAx3XudcC5CQTr&size=190x190&color=00FF9D&bgcolor=FFFFFF" alt="SOL">
+        </div>
+      </div>
+
+      <!-- ETH -->
+      <div class="wallet-container">
+        <div class="wallet-header" onclick="toggleQR('eth')">
+          <div class="wallet-label">ETH<br>0x555e8e28595f1d5abcaDd4FBd6981c2340096cD3</div>
+          <button class="copy-btn" onclick="copyAddress('0x555e8e28595f1d5abcaDd4FBd6981c2340096cD3', event)">Copy</button>
+        </div>
+        <div class="qr-container" id="eth-qr">
+          <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?data=0x555e8e28595f1d5abcaDd4FBd6981c2340096cD3&size=190x190&color=00FF9D&bgcolor=FFFFFF" alt="ETH">
+        </div>
+      </div>
+
+      <!-- TON -->
+      <div class="wallet-container">
+        <div class="wallet-header" onclick="toggleQR('ton')">
+          <div class="wallet-label">TON<br>UQCiVi3yOIRFcTHhnghtTpAPgIpp7pxAbTyH8QuS1wQYVjU4</div>
+          <button class="copy-btn" onclick="copyAddress('UQCiVi3yOIRFcTHhnghtTpAPgIpp7pxAbTyH8QuS1wQYVjU4', event)">Copy</button>
+        </div>
+        <div class="qr-container" id="ton-qr">
+          <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?data=UQCiVi3yOIRFcTHhnghtTpAPgIpp7pxAbTyH8QuS1wQYVjU4&size=190x190&color=00FF9D&bgcolor=FFFFFF" alt="TON">
+        </div>
+      </div>
+    </div>
+
+    <!-- Join Instructions -->
+    <div class="card">
+      <h2>Join Whitelist</h2>
+      <p>1. <strong>Follow @librevoid on X</strong> <span class="required">(Required)</span><br>
+         2. Send $5+ USD equivalent<br>
+         3. Add @Xhandle in memo<br>
+         4. Get LV + NFT + Beta in 24h</p>
+      <a href="https://x.com/librevoid" class="btn" target="_blank">Follow @librevoid</a>
+      <a href="https://discord.gg/VZeUd7zdN" class="btn dc-btn" target="_blank"><i class="fab fa-discord"></i> Join Discord</a>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <p>Void Protocol • <span class="void">Light in the Darkness.</span><br>
+      <a href="https://github.com/librevoid/ecosystem" target="_blank">Ecosystem</a> • 
+      <a href="https://github.com/librevoid/whitepaper" target="_blank">Whitepaper</a> • 
+      <a href="https://github.com/librevoid/presale" target="_blank">Presale</a> • 
+      <a href="https://x.com/librevoid" target="_blank">@librevoid</a></p>
+      <p style="margin-top:1rem; font-size:.85rem;">Official site & app launching soon. 100% funds → LibreVoid build.</p>
+    </div>
+  </div>
+
+  <script>
+    // Countdown to Dec 15, 2025 00:00 EAT
+    const endDate = new Date('2025-12-15T00:00:00+03:00').getTime();
+    const startDate = new Date('2025-11-16T00:00:00+03:00').getTime();
+    const progressFill = document.getElementById('progress-fill');
+    const progressPercent = document.getElementById('progress-percent');
+    let currentPercent = 0;
+
+    const updateProgress = () => {
+      const now = new Date().getTime();
+      const elapsedDays = (now - startDate) / (1000 * 60 * 60 * 24);
+      const targetPercent = Math.min(100, (elapsedDays / 29) * 100 + (Math.random() * 3));
+      currentPercent = Math.max(currentPercent, targetPercent);
+      if (currentPercent > 100) currentPercent = 100;
+
+      progressFill.style.width = currentPercent + '%';
+      progressPercent.textContent = currentPercent.toFixed(1) + '%';
+    };
+
+    const countdown = setInterval(() => {
+      const now = new Date().getTime();
+      const distance = endDate - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById('countdown').innerHTML = 
+        `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+      if (distance < 0) {
+        clearInterval(countdown);
+        document.getElementById('countdown').innerHTML = "PRESALE ENDED";
+        progressFill.style.width = '100%';
+        progressPercent.textContent = '100%';
+      }
+    }, 1000);
+
+    function toggleQR(id) {
+      const container = document.getElementById(id + '-qr');
+      container.style.display = container.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function copyAddress(address, event) {
+      event.stopPropagation();
+      navigator.clipboard.writeText(address).then(() => {
+        const btn = event.target;
+        const original = btn.innerHTML;
+        btn.innerHTML = 'Copied';
+        setTimeout(() => btn.innerHTML = original, 2000);
+      });
+    }
+
+    setInterval(updateProgress, 10000);
+    updateProgress();
+  </script>
+</body>
+</html>
